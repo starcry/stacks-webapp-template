@@ -87,11 +87,11 @@ export const withApplicationInsights = (
                         route: this.props.router.route,
                     }
                     if (this.props.router.query) {
-                        for (const key in this.props.router.query) {
+                        Object.keys(this.props.router.query).forEach(key => {
                             properties[
                                 `query.${key}`
                             ] = this.props.router.query[key]
-                        }
+                        })
                     }
                     appInsights.trackPageView({name, properties})
                 }
