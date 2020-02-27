@@ -1,3 +1,23 @@
 {
-  "presets": ["next/babel"]
+  "env": {
+    "test": {
+      "presets": [
+        [
+          "env",
+          {
+            "targets": {
+              "node": "current"
+            }
+          }
+        ],
+        "next/babel"
+      ]
+    },
+    "development": {
+      "presets": ["next/babel"]
+    },
+    "production": {
+      "presets": ["next/babel"]
+    }
+  }
 }
