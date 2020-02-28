@@ -1,10 +1,10 @@
 const path = require("path")
-const webpack = require("webpack")
 const conf = require("./environment-configuration")
 
 // next.config.js
 module.exports = {
     webpack(config) {
+        // eslint-disable-next-line
         config.resolve.alias = {
             ...config.resolve.alias,
             compositions: path.join(__dirname, "compositions"),
