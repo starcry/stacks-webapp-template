@@ -9,15 +9,15 @@ export default class MyDocument extends Document {
         return (
             <html lang="en">
                 <Head>
+                    <title>Stacks</title>
                     <meta
                         name="theme-color"
                         content={theme.palette.secondary.main}
                     />
                     <link
-                        rel="shortcut icon"
-                        href={`/${
-                            getConfig().publicRuntimeConfig.APP_BASE_PATH
-                        }/static/icons/favicon.ico`}
+                        rel="icon"
+                        type="image/x-icon"
+                        href="/icons/favicon.ico"
                     />
                 </Head>
                 <body>
