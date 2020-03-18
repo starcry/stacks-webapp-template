@@ -4,6 +4,7 @@ import {ServerStyleSheets} from "@material-ui/core/styles"
 import theme from "../config/theme"
 import getConfig from "next/config"
 
+const {APP_BASE_URL, PORT, APP_BASE_PATH} = getConfig().publicRuntimeConfig
 export default class MyDocument extends Document {
     render() {
         return (
@@ -17,7 +18,7 @@ export default class MyDocument extends Document {
                     <link
                         rel="icon"
                         type="image/x-icon"
-                        href="/icons/favicon.ico"
+                        href={`${APP_BASE_URL}:${PORT}${APP_BASE_PATH}/icons/favicon.ico`}
                     />
                 </Head>
                 <body>
