@@ -55,8 +55,6 @@
               }
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="/edit/master/docs/infrastructure.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Infrastructure</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="infrastructure"></a><a href="#infrastructure" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Infrastructure</h2>
-<h3><a class="anchor" aria-hidden="true" id="azure-deveops-pipelines"></a><a href="#azure-deveops-pipelines" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Azure Deveops Pipelines</h3>
-<p>See <a href="/stacks-webapp-template/docs/packages">packages</a> for more information about our open sourced steps.</p>
 <!--
 Ensure we put in lots of information about our Infrastructure. Including:
 <blockquote>
@@ -67,4 +65,47 @@ Ensure we put in lots of information about our Infrastructure. Including:
 ** Client only
 --&gt;</p>
 </blockquote>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 3/4/2020 by Esther Lloyd</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/stacks-webapp-template/docs/browser_support"><span class="arrow-prev">← </span><span>Browser Support</span></a><a class="docs-next button" href="/stacks-webapp-template/docs/faq"><span>FAQ</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#infrastructure">Infrastructure</a><ul class="toc-headings"><li><a href="#azure-deveops-pipelines">Azure Deveops Pipelines</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/stacks-webapp-template/" class="nav-home"><img src="/stacks-webapp-template/img/thumbnail_stacks.png" alt="Amido Stacks Webapp" width="66" height="58"/></a><div><h5>Docs</h5><a href="/stacks-webapp-template/docs/en/index">Getting Started</a></div><div><h5>Community</h5><a href="https://amido.com/">Amido</a></div><div><h5>More</h5><a href="https://github.com/">GitHub</a></div></section><a href="https://github.com/amido/stacks" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/stacks-webapp-template/img/logo.png" alt="stacks-webapp-template" width="170" height="45"/></a><section class="copyright">Copyright © 2020 Amido Ltd</section></footer></div><script src="http://localhost:undefined/livereload.js"></script></body></html>
+<p>All infrastructure tooling is done with <a href="https://www.terraform.io/">Terraform</a>, as a method for implementing our infrastructure as code. Terraform uses workspaces as the main mechanism of segragating states.</p>
+<h2><a class="anchor" aria-hidden="true" id="terraform"></a><a href="#terraform" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Terraform</h2>
+<h2><a class="anchor" aria-hidden="true" id="bootstrap-the-azure-tenant"></a><a href="#bootstrap-the-azure-tenant" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Bootstrap the Azure tenant</h2>
+<p>The first step is to create the Azure tenant and subscription by creating a SPN service account and a storage account for terraform state. This process only needs to be run once run once on an administrators workstation.</p>
+<p>The administrator will need the following permissions:</p>
+<ul>
+<li>Azure AD &quot;Global Administrator&quot; role for the Azure AD Tenant</li>
+<li>IAM subscription owner</li>
+</ul>
+<p>With owner priviledges:</p>
+<ol>
+<li>Create a <a href="https://azure.microsoft.com/en-gb/services/storage/blobs/">Blob Storage instance</a></li>
+<li>Take note of:
+<ol>
+<li>storage account name</li>
+<li>blob name</li>
+<li>ClientID</li>
+<li>TenantID</li>
+<li>SubscriptionId</li>
+<li>ClientSecret</li>
+</ol></li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="resolving-lock-state"></a><a href="#resolving-lock-state" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Resolving lock state</h3>
+<p>Either locally, or in the pipeline, if an error occurs like the following:</p>
+<pre><code class="hljs css language-log">Error: <span class="hljs-builtin-name">Error</span> loading state: failed <span class="hljs-keyword">to</span> lock azure state: storage:<span class="hljs-built_in"> service </span>returned error: <span class="hljs-attribute">StatusCode</span>=409, <span class="hljs-attribute">ErrorCode</span>=LeaseAlreadyPresent, <span class="hljs-attribute">ErrorMessage</span>=There is already a<span class="hljs-built_in"> lease </span>present.
+RequestId:REQUEST_ID
+Time:0000-00-00T00:00:00.0000000Z, <span class="hljs-attribute">RequestInitiated</span>=Weekday, Day Month YYYY 00:00:00 GMT, <span class="hljs-attribute">RequestId</span>=0000000-0000-0000-0000-000000000000, API <span class="hljs-attribute">Version</span>=YYYY-MM-DD, <span class="hljs-attribute">QueryParameterName</span>=, QueryParameterValue=
+Lock Info:
+  ID:        0000000-0000-0000-0000-000000000000
+  Path:      tfstate/amido-stacks-menuenv:amido-stacks-menu-test
+  Operation: OperationTypeApply
+  Who:       vsts@fv-az692
+  Version:   0.00.00
+  Created:   0000-00-00T00:00:00.0000000 +0000 UTC
+  Info:      
+</code></pre>
+<p>We recommend resolving this through the CLI rather than the Portal interface.</p>
+<pre><code class="hljs css language-bash">az storage blob lease <span class="hljs-built_in">break</span> -b <span class="hljs-variable">$KEY_NAME</span> -c <span class="hljs-variable">$BLOB_NAME</span> \
+ --account-name <span class="hljs-variable">$STORAGE_ACC_NAME</span> --account-key <span class="hljs-variable">$STORAGE_ACC_KEY</span>
+</code></pre>
+<p>On success, exit code 0 to be retured.</p>
+<h2><a class="anchor" aria-hidden="true" id="azure-deveops-pipelines"></a><a href="#azure-deveops-pipelines" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Azure Deveops Pipelines</h2>
+<p>See <a href="/stacks-webapp-template/docs/pipelines">Pipeline Templates</a> for more information about our open sourced steps.</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 4/16/2020 by estherthetesteramido</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/stacks-webapp-template/docs/browser_support"><span class="arrow-prev">← </span><span>Browser Support</span></a><a class="docs-next button" href="/stacks-webapp-template/docs/faq"><span>FAQ</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#infrastructure">Infrastructure</a></li><li><a href="#terraform">Terraform</a></li><li><a href="#bootstrap-the-azure-tenant">Bootstrap the Azure tenant</a><ul class="toc-headings"><li><a href="#resolving-lock-state">Resolving lock state</a></li></ul></li><li><a href="#azure-deveops-pipelines">Azure Deveops Pipelines</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/stacks-webapp-template/" class="nav-home"><img src="/stacks-webapp-template/img/thumbnail_stacks.png" alt="Amido Stacks Webapp" width="66" height="58"/></a><div><h5>Docs</h5><a href="/stacks-webapp-template/docs/en/index">Getting Started</a></div><div><h5>Community</h5><a href="https://amido.com/">Amido</a></div><div><h5>More</h5><a href="https://github.com/">GitHub</a></div></section><a href="https://github.com/amido/stacks" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/stacks-webapp-template/img/logo.png" alt="stacks-webapp-template" width="170" height="45"/></a><section class="copyright">Copyright © 2020 Amido Ltd</section></footer></div><script src="http://localhost:undefined/livereload.js"></script></body></html>
